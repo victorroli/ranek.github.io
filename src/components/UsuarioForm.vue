@@ -1,13 +1,15 @@
 <template>
   <form>
-    <label for="nome">Nome:</label>
-    <input id="nome" type="text" name="nome" v-model="nome">
+    <div class="usuario" v-if="mostraDadosLogin">
+      <label for="nome">Nome:</label>
+      <input id="nome" type="text" name="nome" v-model="nome">
 
-    <label for="email">Email:</label>
-    <input id="email" type="email" name="email" v-model="email">
+      <label for="email">Email:</label>
+      <input id="email" type="email" name="email" v-model="email">
 
-    <label for="senha">Senha:</label>
-    <input id="senha" type="password" name="senha" v-model="senha">
+      <label for="senha">Senha:</label>
+      <input id="senha" type="password" name="senha" v-model="senha">
+    </div>
 
     <label for="cep">Cep</label>
     <input id="cep" type="text" name="cep" v-model="cep" @keyup="preencherCep" maxlength="8">
@@ -54,7 +56,10 @@ export default {
       ],
       base: "usuario",
       mutation: "UPDATE_USUARIO"
-    })
+    }),
+    mostraDadosLogin() {
+      return !this.$store.state.login || this.$route.name === "usuario-editar";
+    }
   },
   methods: {
     preencherCep() {
@@ -73,10 +78,15 @@ export default {
 </script>
 
 <style scoped>
-form {
+form,
+.usuario {
   display: grid;
   grid-template-columns: 80px 1fr;
   align-items: center;
+}
+
+.usuario {
+  grid-column: 1/ 3;
 }
 
 .button {

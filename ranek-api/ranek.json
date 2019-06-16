@@ -1,4 +1,48 @@
 {
+  "transacao": [
+    {
+      "comprador_id": "andre@origamid.com",
+      "vendedor_id": "andre@origamid.com",
+      "produto": {
+        "id": "notebook",
+        "nome": "Notebook",
+        "usuario_id": "andre@origamid.com",
+        "preco": "4999",
+        "vendido": "false",
+        "descricao": "Esse é um novo notebook.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "12345678",
+        "rua": "Rua Ali Perto",
+        "bairro": "São Lucas",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ"
+      },
+      "id": 1
+    },
+    {
+      "comprador_id": "felipe@gmail.com",
+      "vendedor_id": "andre@origamid.com",
+      "produto": {
+        "id": "smartphone",
+        "nome": "Smartphone",
+        "usuario_id": "andre@origamid.com",
+        "preco": "1999",
+        "vendido": "false",
+        "descricao": "Esse é um novo smartphone.",
+        "fotos": null
+      },
+      "endereco": {
+        "cep": "39400053",
+        "rua": "Rua Padre Augusto",
+        "bairro": "Centro",
+        "cidade": "Montes Claros",
+        "estado": "MG"
+      },
+      "id": 2
+    }
+  ],
   "usuario": [
     {
       "id": "andre@origamid.com",

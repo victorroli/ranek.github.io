@@ -5,6 +5,7 @@ import { api } from "@/services.js";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: true,
   state: {
     login: false,
     usuario: {
